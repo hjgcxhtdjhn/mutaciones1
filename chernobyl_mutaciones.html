@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chernobyl: Mutaciones Genéticas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.5s;
+    }
+    .portada {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #3a3a50, #1e1e2f), url('https://upload.wikimedia.org/wikipedia/commons/4/4a/Chernobyl_NPP_2007.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 2em;
+      color: #e8d89e;
+      text-shadow: 2px 2px 8px #000000;
+    }
+    .portada h1 {
+      font-size: 4em;
+      margin-bottom: 0.5em;
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
+    }
+    .portada p {
+      font-size: 1.4em;
+      max-width: 600px;
+      margin-bottom: 1.5em;
+      animation: fadeIn 3s ease-in-out forwards;
+      opacity: 0;
+    }
+    .boton-portada {
+      background-color: #d4af37;
+      border: none;
+      color: #1e1e2f;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 12px #d4af37;
+      transition: background-color 0.3s, transform 0.3s;
+      animation: fadeIn 4s ease-in-out forwards;
+      opacity: 0;
+    }
+    .boton-portada:hover {
+      background-color: #c19b24;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #c19b24;
+    }
+    header {
+      background-color: #2c2c3c;
+      padding: 1em;
+      text-align: center;
+      color: #e8d89e;
+      text-shadow: 1px 1px 4px #000000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      animation: fadeIn 2s ease-in-out;
+    }
+    main {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    .interactivo {
+      background-color: #3a3a50;
+      padding: 1em;
+      border-radius: 10px;
+      color: #e8d89e;
+    }
+    select, button {
+      background-color: #d4af37;
+      border: none;
+      color: #1e1e2f;
+      padding: 0.6em 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1em;
+      box-shadow: 0 0 8px #d4af37;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    select:hover, button:hover {
+      background-color: #c19b24;
+      transform: scale(1.05);
+      box-shadow: 0 0 14px #c19b24;
+    }
+    #resultado {
+      margin-top: 1em;
+      background-color: #2f2f48;
+      padding: 1em;
+      border-radius: 10px;
+      min-height: 70px;
+      font-size: 1.1em;
+      color: #e8d89e;
+      box-shadow: inset 0 0 8px #d4af37;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <section class="portada">
+    <h1>Modificación Genética</h1>
+    <p>Explora cómo el desastre de Chernobyl provocó cambios drásticos en el ADN de especies animales y vegetales, alterando el equilibrio natural con mutaciones sorprendentes.</p>
+    <button class="boton-portada" onclick="document.getElementById('contenido').scrollIntoView({ behavior: 'smooth' })">Ver más</button>
+  </section>
+
+  <header id="contenido">
+    <h1>Chernobyl y las Mutaciones Genéticas en Especies</h1>
+  </header>
+  <main>
+    <section>
+      <h2>¿Qué ocurrió en Chernobyl?</h2>
+      <p>El 26 de abril de 1986, el reactor número 4 de la central nuclear de Chernobyl (Ucrania) explotó durante una prueba de seguridad. El accidente liberó enormes cantidades de material radiactivo al ambiente, afectando gravemente a la población humana, los ecosistemas cercanos y provocando la evacuación de miles de personas. Fue considerado el peor accidente nuclear de la historia.</p>
+    </section>
+
+    <section>
+      <h2>Impacto en animales y plantas</h2>
+      <p>La exposición a altos niveles de radiación afectó directamente el ADN de organismos vivos. Muchas especies mostraron mutaciones visibles como deformidades físicas, reducción en la capacidad reproductiva, alteraciones cromosómicas, y tasas elevadas de mortalidad en crías.</p>
+      <p>Algunos ejemplos incluyen:</p>
+      <ul>
+        <li><strong>Ratones:</strong> alteraciones en su sistema inmunológico y tumores espontáneos.</li>
+        <li><strong>Aves:</strong> cambios en el plumaje, disminución en la fertilidad y reducción del tamaño cerebral.</li>
+        <li><strong>Árboles de pino:</strong> crecimiento lento, ramas deformes y decoloración conocida como "bosque rojo".</li>
+        <li><strong>Insectos:</strong> malformaciones en las alas de mariposas y reducción de población en abejas.</li>
+        <li><strong>Hongos:</strong> desarrollo de pigmentos especiales que les permiten absorber radiación (radiosíntesis).</li>
+      </ul>
+      <p>Aunque muchas especies desaparecieron en los primeros años, algunas comenzaron a adaptarse a las condiciones extremas, mostrando resiliencia genética.</p>
+    </section>
+
+    <section class="interactivo">
+      <h2>Explora las Mutaciones por Especie</h2>
+      <p>Selecciona una especie para conocer en detalle cómo fue afectada genéticamente por la radiación.</p>
+      <select id="especie">
+        <option value="lobos">Lobos</option>
+        <option value="aves">Aves</option>
+        <option value="insectos">Insectos</option>
+        <option value="plantas">Plantas</option>
+        <option value="roedores">Roedores</option>
+        <option value="hongos">Hongos</option>
+        <option value="peces">Peces</option>
+        <option value="anfibios">Anfibios</option>
+      </select>
+      <button onclick="mostrarMutacion()">Ver Mutación</button>
+      <div id="resultado"></div>
+    </section>
+
+    <section>
+      <h2>¿Qué nos enseñan estas mutaciones?</h2>
+      <p>El análisis de las consecuencias genéticas del desastre de Chernobyl ha sido clave para entender cómo los organismos pueden resistir entornos extremos. Se han descubierto genes relacionados con la reparación del ADN, cambios epigenéticos que permiten la supervivencia y nuevas rutas metabólicas. Estos hallazgos tienen aplicaciones en medicina, biotecnología y exploración espacial.</p>
+    </section>
+  </main>
+
+  <script>
+    function mostrarMutacion() {
+      const especie = document.getElementById("especie").value;
+      const resultado = document.getElementById("resultado");
+      let mensaje = "";
+
+      switch (especie) {
+        case "lobos":
+          mensaje = "<strong>Lobos:</strong> adaptaciones inmunológicas y crecimiento poblacional inusual en la zona de exclusión.";
+          break;
+        case "aves":
+          mensaje = "<strong>Aves:</strong> albinismo parcial, canto alterado y disminución de fertilidad.";
+          break;
+        case "insectos":
+          mensaje = "<strong>Insectos:</strong> malformaciones en alas, cromosomas alterados y alta mortalidad larvaria.";
+          break;
+        case "plantas":
+          mensaje = "<strong>Plantas:</strong> mutaciones celulares, hojas deformes y mayor resistencia a suelos radiactivos.";
+          break;
+        case "roedores":
+          mensaje = "<strong>Roedores:</strong> malformaciones óseas y daños genéticos acumulativos.";
+          break;
+        case "hongos":
+          mensaje = "<strong>Hongos:</strong> capaces de usar radiación como fuente de energía mediante radiosíntesis.";
+          break;
+        case "peces":
+          mensaje = "<strong>Peces:</strong> tasas anormales de crecimiento, deformidades y mutaciones genéticas heredables.";
+          break;
+        case "anfibios":
+          mensaje = "<strong>Anfibios:</strong> malformaciones en extremidades, cambios reproductivos y sensibilidad genética.";
+          break;
+        default:
+          mensaje = "Selecciona una especie para ver la información.";
+      }
+
+      resultado.innerHTML = `<p>${mensaje}</p>`;
+    }
+  </script>
+</body>
+</html>
